@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Preguntas de Repaso</h1>
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer(0)">¿Qué es HTML y cuál es su función principal en el desarrollo web?</div>
+            <div class="answer">Es el lenguaje estándar para crear y estructurar páginas web se basa en etiquetas y elementos.</div>
+            
+            <div class="question" onclick="toggleAnswer(1)">¿Qué son las etiquetas HTML y cómo se utilizan?</div>
+            <div class="answer">HTML define elementos específicos y su presentación en la página mediante etiquetas que comienzan y terminan con símbolos especiales.</div>
+            
+            <div class="question" onclick="toggleAnswer(2)">Proporciona ejemplos de algunas de las etiquetas HTML más comunes.</div>
+            <div class="answer"><ul>
+                <li>!DOCTYPE: Se utiliza para especificar la versión de HTML que se está utilizando en la página.</li>
+                <li>html: Define el inicio y el final de la página web.</li>
+                <li>head: Define la sección de encabezado de la página, donde se incluyen elementos como el título de la página, metaetiquetas, scripts, entre otros.</li>
+              </ul></div>
+            
+            <div class="question" onclick="toggleAnswer(3)">¿Qué es CSS y cómo se utiliza para dar estilo a una página web?</div>
+            <div class="answer">CSS, o "hoja de estilo en cascada", es un lenguaje que define el diseño de páginas web, complementando el contenido proporcionado por HTML.</div>
+            
+            <div class="question" onclick="toggleAnswer(4)">¿Cuáles son las propiedades más importantes de CSS?</div>
+            <div class="answer">text-align, text-decoration, text-transform, text-indent, line-height, letter-spacing y word-spacing</div>
+            
+            <div class="question" onclick="toggleAnswer(5)">Explica el modelo de caja (box model) en CSS.</div>
+            <div class="answer">Esta especificación detalla cómo se utilizan las reservas y el llenado para establecer espacio dentro y alrededor del cuadro CSS.</div>
+            
+            <div class="question" onclick="toggleAnswer(6)">¿Qué es el diseño responsivo y cómo se logra con CSS?</div>
+            <div class="answer">Un diseño web receptivo permite que las páginas web se adapten a varios tamaños y dispositivos de pantalla. Se usa HTML y CSS para ajustar el tamaño, ocultar, reducir, expandir o mover el contenido de manera adecuada en cualquier dispositivo.</div>
+            
+            <div class="question" onclick="toggleAnswer(7)">¿Qué es JavaScript y cómo se integra en el desarrollo web?</div>
+            <div class="answer">JavaScript es un lenguaje de programación que se usa para crear sitios web interactivos. Se aplica en el desarrollo web, especialmente cuando se utiliza con documentos HTML.</div>
+            
+            <div class="question" onclick="toggleAnswer(8)">Explica cómo JavaScript interactúa con el HTML y CSS a través del DOM (Document Object Model).</div>
+            <div class="answer">JavaScript interactúa con el DOM para cambiar la dinámica de las páginas web en HTML y CSS. Esto ayuda a crear aplicaciones web que sean interactivas y respondan a las acciones del usuario. </div>
+            
+            <div class="question" onclick="toggleAnswer(9)">Proporciona ejemplos de cómo JavaScript puede hacer que una página web sea interactiva.</div>
+            <div class="answer"><ul>
+                <li>Formularios interactivos</li>
+                <li>Animaciones de menú</li>
+                <li>Actualizaciones de contenido dinámico</li>
+              </ul></div>
+            
+            <div class="question" onclick="toggleAnswer(10)">¿Qué es Git y por qué es importante para el desarrollo web?</div>
+            <div class="answer">Esto ayuda a los desarrolladores web a trabajar juntos en proyectos, seguir los cambios y retroceder a versiones anteriores si es necesario. También favorece el trabajo en equipo, permitiendo que varios desarrolladores trabajen al mismo tiempo en diferentes funciones.</div>
+            
+            <div class="question" onclick="toggleAnswer(11)">Explica cómo Git se usa para el control de versiones en proyectos de desarrollo web.</div>
+            <div class="answer">GIT es un sistema que ayuda a los desarrolladores de software a seguir su código y las diferentes versiones de proyectos en los que trabajan en equipo. Es una herramienta útil para el desarrollo web.
+                </div>
+            
+            <div class="question" onclick="toggleAnswer(12)">¿Qué es GitHub y cómo facilita la colaboración en proyectos web?</div>
+            <div class="answer">
+                Es un servicio en la nube con un sistema de administración de versiones llamado Git. Permite a los desarrolladores trabajar juntos y hacer cambios en proyectos compartidos, mientras se mantiene un registro detallado del progreso.
+                </div>
+        </div>
+    </div>
+    <script>
+        function toggleAnswer(index) {
+            let answers = document.querySelectorAll('.answer');
+            if (answers[index].style.display === 'block') {
+                answers[index].style.display = 'none';
+            } else {
+                answers[index].style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
