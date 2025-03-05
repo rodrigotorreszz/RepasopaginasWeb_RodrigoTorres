@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Practico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora de Descuentos</h2>
+        <label for="monto">Ingrese el monto de la compra ($):</label>
+        <input type="number" id="monto" placeholder="Ejemplo: 750">
+        <button onclick="calcularDescuento()">Calcular Descuento</button>
+        <div class="result" id="resultado"></div>
+    </div>
+
+    <script>
+        function calcularDescuento() {
+            let monto = parseFloat(document.getElementById("monto").value);
+            let descuento = 0;
+            
+            if (monto >= 1000) {
+                descuento = 15;
+            } else if (monto >= 500 && monto <= 999) {
+                descuento = 10;
+            } else {
+                descuento = 5;
+            }
+            
+            let montoDescuento = (monto * descuento) / 100;
+            let montoFinal = monto - montoDescuento;
+            
+            document.getElementById("resultado").innerHTML = 
+                `Descuento aplicado: ${descuento}%<br> Total a pagar: $${montoFinal.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
